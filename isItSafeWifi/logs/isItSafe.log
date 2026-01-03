@@ -2,3 +2,25 @@
 2026-01-03 18:05:31 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
 2026-01-03 18:22:40 - [INFO] - WiFi_GUI - Core services initialized.
 2026-01-03 18:22:41 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:01:40 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:01:41 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:03:58 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:03:59 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:04:22 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:04:22 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:04:55 - [INFO] - WiFi_GUI - Scanner paused.
+2026-01-03 19:04:56 - [INFO] - WiFi_GUI - Scanner resumed.
+2026-01-03 19:11:40 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:11:41 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:12:05 - [INFO] - WiFi_GUI - Scanner paused.
+2026-01-03 19:12:06 - [INFO] - WiFi_GUI - Scanner resumed.
+2026-01-03 19:33:14 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:33:14 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:34:01 - [CRITICAL] - Detection - Evil Twin detected! SSID: Nayatel 102
+2026-01-03 19:34:12 - [WARNING] - Blocker - Attempting to block SSID: Nayatel 102
+2026-01-03 19:34:12 - [INFO] - Blocker - Successfully blocked SSID: Nayatel 102
+2026-01-03 19:34:14 - [INFO] - Blocker - User blocked SSID: Nayatel 102
+2026-01-03 19:34:16 - [CRITICAL] - Detection - Evil Twin detected! SSID: Hexxi
+2026-01-03 19:34:40 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:34:40 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:34:44 - [CRITICAL] - Detection - Evil Twin detected! SSID: Hexxi

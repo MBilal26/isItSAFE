@@ -17,3 +17,39 @@
 2026-01-03 18:45:02 - [INFO] - WiFi_GUI - Core services initialized.
 2026-01-03 18:45:02 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
 2026-01-03 18:45:10 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-03 18:57:47 - [ERROR] - Main_Hub - Attempted dependency install but requirements.txt is missing
+2026-01-03 18:57:50 - [ERROR] - Main_Hub - Attempted dependency install but requirements.txt is missing
+2026-01-03 18:57:52 - [ERROR] - Main_Hub - Attempted dependency install but requirements.txt is missing
+2026-01-03 19:01:31 - [INFO] - Main_Hub - Launching Metadata Cleaner...
+2026-01-03 19:01:34 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-03 19:01:37 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:03:16 - [INFO] - Test_Module - This is a verification log entry at 19:03-TEST
+2026-01-03 19:03:56 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:04:02 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-03 19:04:07 - [INFO] - Main_Hub - Launching Metadata Cleaner...
+2026-01-03 19:04:19 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:05:21 - [INFO] - Main_Hub - Starting dependency installation...
+2026-01-03 19:05:23 - [INFO] - Main_Hub - Dependencies installed successfully.
+2026-01-03 19:11:38 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:16:05 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:16:06 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:16:17 - [CRITICAL] - Detection - Evil Twin detected! SSID: NAYATEL 202_5G
+2026-01-03 19:17:04 - [INFO] - WiFi_GUI - Scanner paused.
+2026-01-03 19:19:21 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-03 19:19:21 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-03 19:20:45 - [CRITICAL] - Detection - Evil Twin detected! SSID: NAYATEL 202_5G
+2026-01-03 19:20:46 - [CRITICAL] - Detection - Evil Twin detected! SSID: Nayatel 102
+2026-01-03 19:20:55 - [WARNING] - Blocker - Attempting to block SSID: Nayatel 102
+2026-01-03 19:20:55 - [INFO] - Blocker - Successfully blocked SSID: Nayatel 102
+2026-01-03 19:20:56 - [INFO] - Blocker - User blocked SSID: Nayatel 102
+2026-01-03 19:20:59 - [INFO] - Blocker - Unblocking SSID: Nayatel 102
+2026-01-03 19:20:59 - [INFO] - Blocker - Successfully unblocked SSID: Nayatel 102
+2026-01-03 19:20:59 - [INFO] - Blocker - User unblocked SSID: Nayatel 102
+2026-01-03 19:33:12 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:34:00 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-03 19:34:10 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-03 19:34:20 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-03 19:34:30 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-03 19:34:37 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-03 19:34:41 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-03 19:34:47 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!

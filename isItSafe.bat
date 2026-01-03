@@ -11,7 +11,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Run the main application
-python main.py
+python isItSafe.py
 
 if %errorlevel% neq 0 (
     echo [ERROR] Application crashed. Check logs/app.log for details.

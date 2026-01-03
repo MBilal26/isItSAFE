@@ -134,8 +134,8 @@ class IsItSafeGUI:
             self.tree.heading(col, text=col, command=lambda c=col: self._sort_by_column(c))
             self.tree.column(col, width=width, anchor=anchor)
         
-        self.tree.tag_configure('danger', background="#4A0000", foreground=DANGER)
-        self.tree.tag_configure('warning', background="#4A3800", foreground=WARNING)
+        self.tree.tag_configure('danger', background="#7F1D1D", foreground=DANGER)
+        self.tree.tag_configure('warning', background=WARNING, foreground=BG_DARK)
         self.tree.tag_configure('safe', background=BG_DARK, foreground=TEXT_MAIN)
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=self.tree.yview)
@@ -205,10 +205,14 @@ class IsItSafeGUI:
             self.tree.delete(item)
         networks = self.scanner.networks
         evil_twins = self.scanner.detect_evil_twins()
+        blocked_ssids = self.db.get_all_blocks()
         threat_count = 0
         
         for bssid, data in networks.items():
             ssid = data.get("SSID", "[Hidden]")
+            if ssid in blocked_ssids:
+                continue # Hide blocked networks
+                
             signal = f"{data.get('Signal')}%"
             security = f"{data.get('Auth')} / {data.get('Encrypt')}"
             
@@ -216,7 +220,7 @@ class IsItSafeGUI:
             is_open = "none" in data.get('Encrypt', '').lower()
             
             verdict = "⚠️ CLONE DETECTED" if is_threat else ("🔓 UNSECURE" if is_open else "🛡️ SECURE")
-            tag = 'danger' if is_threat else ('warning' if is_open else 'safe')
+            tag = 'warning' if is_threat else ('danger' if is_open else 'safe')
             
             if is_threat:
                 threat_count += 1

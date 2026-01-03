@@ -1,6 +1,15 @@
 import subprocess
 import re
+import os
+import sys
 from typing import Dict, List
+
+# Logger integration
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs"))
+try:
+    from logger import log_event
+except ImportError:
+    def log_event(m, msg, l="info"): pass
 
 class NetworkScanner:
     def __init__(self):
@@ -24,23 +33,38 @@ class NetworkScanner:
         self.is_scanning = True
         try:
             output = subprocess.check_output(
-                ['netsh', 'wlan', 'show', 'networks', 'mode=bssid'],
+                'netsh wlan show networks mode=bssid',
                 shell=True,
                 creationflags=0x08000000,
                 timeout=15
             ).decode('ascii', errors='ignore')
             
-            results = self.pattern.findall(output)
             new_networks = {}
-            for ssid, net_type, auth, encrypt, bssid, signal in results:
-                ssid = ssid.strip() or "[Hidden]"
-                bssid = bssid.strip().upper()
-                new_networks[bssid] = {
-                    "SSID": ssid,
-                    "Signal": signal.strip(),
-                    "Auth": auth.strip(),
-                    "Encrypt": encrypt.strip()
-                }
+            # Split by SSID blocks
+            ssid_blocks = re.split(r"SSID \d+ : ", output)[1:]
+            
+            for block in ssid_blocks:
+                lines = block.split('\n')
+                if not lines: continue
+                ssid = lines[0].strip() or "[Hidden]"
+                
+                # Extract global network info from the block
+                auth_match = re.search(r"Authentication\s+: (.*?)\n", block)
+                encrypt_match = re.search(r"Encryption\s+: (.*?)\n", block)
+                auth = auth_match.group(1).strip() if auth_match else ""
+                encrypt = encrypt_match.group(1).strip() if encrypt_match else ""
+                
+                # Find all BSSIDs in this block
+                bssids = re.findall(r"BSSID \d+\s+: (.*?)\n\s+Signal\s+: (.*?)\n", block)
+                
+                for bssid_val, signal_val in bssids:
+                    bssid = bssid_val.strip().upper()
+                    new_networks[bssid] = {
+                        "SSID": ssid,
+                        "Signal": signal_val.strip().replace('%', ''),
+                        "Auth": auth,
+                        "Encrypt": encrypt
+                    }
             self.networks = new_networks
         except Exception as e:
             print(f"Scan error: {e}")
@@ -69,28 +93,36 @@ class NetworkScanner:
 class NetworkBlocker:
     @staticmethod
     def block_ssid(ssid: str) -> bool:
+        if not ssid or ssid == "[Hidden]": return False
         try:
             log_event("Blocker", f"Attempting to block SSID: {ssid}", "warning")
-            subprocess.run(
-                ['netsh', 'wlan', 'add', 'filter', 'permission=denyall',
-                 f'ssid="{ssid}"', 'networktype=infrastructure'],
-                shell=True, creationflags=0x08000000, timeout=5, check=True
-            )
-            return True
+            cmd = f'netsh wlan add filter permission=block ssid="{ssid}" networktype=infrastructure'
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True, creationflags=0x08000000, timeout=10)
+            
+            if result.returncode == 0:
+                log_event("Blocker", f"Successfully blocked SSID: {ssid}")
+                return True
+            else:
+                log_event("Blocker", f"Failed to block {ssid}. Error: {result.stderr.strip() or result.stdout.strip()}", "error")
+                return False
         except Exception as e:
-            log_event("Blocker", f"Failed to block {ssid}: {str(e)}", "error")
+            log_event("Blocker", f"Exception during block {ssid}: {str(e)}", "error")
             return False
 
     @staticmethod
     def unblock_ssid(ssid: str) -> bool:
+        if not ssid: return False
         try:
             log_event("Blocker", f"Unblocking SSID: {ssid}")
-            subprocess.run(
-                ['netsh', 'wlan', 'delete', 'filter', 'permission=denyall',
-                 f'ssid="{ssid}"', 'networktype=infrastructure'],
-                shell=True, creationflags=0x08000000, timeout=5, check=True
-            )
-            return True
+            cmd = f'netsh wlan delete filter permission=block ssid="{ssid}" networktype=infrastructure'
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True, creationflags=0x08000000, timeout=10)
+            
+            if result.returncode == 0:
+                log_event("Blocker", f"Successfully unblocked SSID: {ssid}")
+                return True
+            else:
+                log_event("Blocker", f"Failed to unblock {ssid}. Error: {result.stderr.strip() or result.stdout.strip()}", "error")
+                return False
         except Exception as e:
-            log_event("Blocker", f"Failed to unblock {ssid}: {str(e)}", "error")
+            log_event("Blocker", f"Exception during unblock {ssid}: {str(e)}", "error")
             return False

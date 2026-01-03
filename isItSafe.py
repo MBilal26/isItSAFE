@@ -8,10 +8,17 @@ import threading
 
 # Logger integration
 sys.path.append(os.path.join(os.getcwd(), "logs"))
+sys.path.append(os.path.join(os.getcwd(), "isItSafeWifi")) # For scanner
+
 try:
     from logger import log_event
 except ImportError:
     def log_event(m, msg, l="info"): pass
+
+try:
+    from scanner import NetworkScanner
+except ImportError:
+    NetworkScanner = None
 
 
 BG_DARK = "#0B0E14"
@@ -53,7 +60,12 @@ class MainMenu:
         self.root.configure(bg=BG_DARK)
 
         self._setup_styles()
+        self.module_buttons = {}
         self._create_widgets()
+        
+        if NetworkScanner:
+            self.bg_scanner = NetworkScanner()
+            self._start_bg_monitoring()
 
     def _setup_styles(self):
         self.style = ttk.Style()
@@ -182,6 +194,28 @@ class MainMenu:
             pady=8
         )
         launch_btn.pack(side=tk.BOTTOM, pady=(10, 0))
+        self.module_buttons[module["name"]] = launch_btn
+
+    def _start_bg_monitoring(self):
+        def monitor():
+            while True:
+                try:
+                    self.bg_scanner.scan_networks()
+                    threats = self.bg_scanner.detect_evil_twins()
+                    
+                    btn = self.module_buttons.get("WiFi Security Monitor")
+                    if btn:
+                        if threats:
+                            btn.config(bg=DANGER, text="⚠️ THREAT DETECTED")
+                            log_event("Main_Hub", f"Background Monitor: {len(threats)} Evil Twins detected!", "warning")
+                        else:
+                            btn.config(bg=ACCENT, text="LAUNCH")
+                except Exception as e:
+                    log_event("Main_Hub", f"Background Monitor Error: {str(e)}", "error")
+                import time
+                time.sleep(10)
+        
+        threading.Thread(target=monitor, daemon=True).start()
 
     def _launch_module(self, module):
         abs_script_path = os.path.abspath(module["path"])
@@ -203,7 +237,7 @@ class MainMenu:
         threading.Thread(target=run, daemon=True).start()
 
     def _install_deps(self):
-        req_path = os.path.abspath("requirements.txt")
+        req_path = os.path.abspath(os.path.join("Data", "requirements.txt"))
         if not os.path.exists(req_path):
             log_event("Main_Hub", "Attempted dependency install but requirements.txt is missing", "error")
             messagebox.showerror("Error", "requirements.txt not found in root directory!")
