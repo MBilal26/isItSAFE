@@ -1,9 +1,10 @@
 import os
+import sys
 import subprocess
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import threading
-from PIL import Image
+from PIL import Image, ImageTk
 from PyPDF2 import PdfReader, PdfWriter
 from docx import Document
 
@@ -40,6 +41,7 @@ class MetadataCleanerApp:
         self.selected_file = ""
         self.before_meta = {}
         self.is_processing = False
+        self.sensitive_keys = ['GPS', 'Location', 'Make', 'Model', 'Software', 'DateTime', 'Author', 'Creator', 'Latitude', 'Longitude']
         
         self._setup_sidebar()
         self._setup_main_area()
@@ -60,8 +62,12 @@ class MetadataCleanerApp:
         tk.Label(self.sidebar, text="Metadata Cleaner", font=("Segoe UI", 9), bg=BG_SIDE, fg=TEXT_DIM).pack()
         
         self.canvas = tk.Canvas(self.sidebar, width=150, height=150, bg=BG_SIDE, highlightthickness=0)
-        self.canvas.pack(pady=30)
-        self.canvas.create_text(75, 75, text="🖼️", font=("Segoe UI", 80), fill=BG_CARD)
+        self.canvas.pack(pady=10)
+        self.preview_placeholder = self.canvas.create_text(75, 75, text="🖼️", font=("Segoe UI", 80), fill=BG_CARD)
+        
+        # New: Label for actual image preview
+        self.preview_label = tk.Label(self.sidebar, bg=BG_SIDE)
+        self.preview_label.pack(pady=10)
         
         # Status Label
         self.status_var = tk.StringVar(value="READY")
@@ -180,11 +186,35 @@ class MetadataCleanerApp:
     def _analyze_file_task(self):
         try:
             self.before_meta = self.get_full_metadata(self.selected_file)
+            ext = os.path.splitext(self.selected_file)[1].lower()
+            
+            # Generate Thumbnail for sidebar
+            if ext in [".jpg", ".jpeg", ".png"]:
+                try:
+                    img = Image.open(self.selected_file)
+                    img.thumbnail((200, 200))
+                    photo = ImageTk.PhotoImage(img)
+                    self.root.after(0, lambda p=photo: self._update_sidebar_preview(p))
+                except:
+                    self.root.after(0, lambda: self._update_sidebar_preview(None))
+            else:
+                self.root.after(0, lambda: self._update_sidebar_preview(None))
+
             self.root.after(0, lambda: self.view_metadata(True))
             self.root.after(0, lambda: self.set_ready("FILE LOADED"))
         except Exception as e:
             self.root.after(0, lambda: messagebox.showerror("Analysis Error", str(e)))
             self.root.after(0, self.set_ready)
+
+    def _update_sidebar_preview(self, photo):
+        if photo:
+            self.canvas.pack_forget()
+            self.preview_label.config(image=photo)
+            self.preview_label.image = photo # Keep reference
+            self.preview_label.pack(pady=10)
+        else:
+            self.preview_label.pack_forget()
+            self.canvas.pack(pady=10)
 
     def get_full_metadata(self, file_path):
         meta = self._get_native_metadata(file_path)
@@ -234,10 +264,22 @@ class MetadataCleanerApp:
     def view_metadata(self, before=True):
         self.text_box.config(state="normal")
         self.text_box.delete("1.0", tk.END)
+        
+        # Configure tags for highlighting
+        self.text_box.tag_configure("SENSITIVE", foreground=DANGER, font=("Consolas", 10, "bold"))
+        self.text_box.tag_configure("HEADER", foreground=ACCENT, font=("Consolas", 12, "bold"))
+
         if before:
-            content = "🔍 DETECTED METADATA ATRIBUTES:\n" + "="*50 + "\n\n"
-            content += "\n".join([f"{k:35}: {v}" for k, v in self.before_meta.items()])
-            self.text_box.insert(tk.END, content)
+            self.text_box.insert(tk.END, "🔍 DETECTED METADATA ATRIBUTES:\n", "HEADER")
+            self.text_box.insert(tk.END, "="*50 + "\n\n")
+            
+            for k, v in self.before_meta.items():
+                is_sensitive = any(sk.lower() in k.lower() for sk in self.sensitive_keys)
+                tag = "SENSITIVE" if is_sensitive else ""
+                
+                line = f"{k:35}: {v}\n"
+                self.text_box.insert(tk.END, line, tag)
+                
         self.text_box.config(state="disabled")
 
     def _run_preview_task(self):

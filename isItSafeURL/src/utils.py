@@ -51,12 +51,25 @@ def log_result(url, score, result, features):
         ])
 
 def validate_url(url):
-    """Checks if the URL is properly formatted with a scheme."""
-    parsed = urlparse(url)
-    if not parsed.scheme in ('http', 'https'):
+    """
+    Checks if the URL is properly formatted and doesn't contain
+    suspiciously prohibited characters (e.g., spaces).
+    """
+    if not url or not isinstance(url, str):
         return False
-    if not parsed.netloc:
+        
+    url = url.strip()
+    if " " in url:
         return False
-    return True
+
+    try:
+        parsed = urlparse(url)
+        if not parsed.scheme in ('http', 'https'):
+            return False
+        if not parsed.netloc:
+            return False
+        return True
+    except Exception:
+        return False
 
 
