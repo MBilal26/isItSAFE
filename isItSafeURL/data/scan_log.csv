@@ -1,0 +1,51 @@
+Timestamp,URL,Risk Score,Result,Subdomain,Domain,TLD
+
+2025-12-29 16:29:26,https://www.google.com,0,LEGITIMATE,www,google,com
+2025-12-29 16:29:26,https://www.facebook.com,0,LEGITIMATE,www,facebook,com
+2025-12-29 16:29:26,https://www.amazon.com,0,LEGITIMATE,www,amazon,com
+2025-12-29 16:29:26,http://192.168.1.1/login,7,FAKE / PHISHING,,192.168.1.1,
+2025-12-29 16:29:26,https://www.paypal.com@secure-login.net/verify,7,FAKE / PHISHING,,secure-login,net
+2025-12-29 16:29:26,http://a8d3j2k4l9.com/account/update,5,FAKE / PHISHING,,a8d3j2k4l9,com
+2025-12-29 16:29:26,https://apple.com/secure/login.php?user=test,2,LEGITIMATE,,apple,com
+2025-12-29 16:29:26,https://www.github.com,0,LEGITIMATE,www,github,com
+2025-12-29 16:29:26,https://stackoverflow.com,2,LEGITIMATE,,stackoverflow,com
+2025-12-29 16:29:26,http://malicious-site.com/verify/account/update,3,LEGITIMATE,,malicious-site,com
+2025-12-29 16:29:26,https://xn--pple-43d.com,2,LEGITIMATE,,xn--pple-43d,com
+2025-12-29 16:29:26,https://www.microsoft.com,0,LEGITIMATE,www,microsoft,com
+2025-12-29 16:29:26,https://www.youtube.com,0,LEGITIMATE,www,youtube,com
+2025-12-29 16:29:26,http://very-long-url-with-many-parameters-designed-to-confuse-users-about-the-true-destination.com/login/verify,6,FAKE / PHISHING,,very-long-url-with-many-parameters-designed-to-confuse-users-about-the-true-destination,com
+2025-12-29 16:29:26,https://www.reddit.com,0,LEGITIMATE,www,reddit,com
+2025-12-29 16:29:26,https://www.linkedin.com,0,LEGITIMATE,www,linkedin,com
+2025-12-29 16:29:26,https://www.twitter.com,0,LEGITIMATE,www,twitter,com
+2025-12-29 16:29:26,http://192.168.0.1/admin,5,FAKE / PHISHING,,192.168.0.1,
+2025-12-29 16:29:26,https://bank-secure-login.com/verify/account,4,LEGITIMATE,,bank-secure-login,com
+2025-12-29 16:29:26,https://www.wikipedia.org,0,LEGITIMATE,www,wikipedia,org
+2025-12-29 16:29:26,https://www.instagram.com,0,LEGITIMATE,www,instagram,com
+2025-12-29 16:29:55,https://web.whatsapp.com/,0,LEGITIMATE,web,whatsapp,com
+2025-12-29 16:29:59,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:00,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:01,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:01,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:01,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:02,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:02,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:02,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:02,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:03,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:03,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:03,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:03,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:03,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:04,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:04,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:04,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:04,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:04,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:05,https://web.whatsap.com/,2,LEGITIMATE,web,whatsap,com
+2025-12-29 16:30:07,https://web.whatsa.com/,0,LEGITIMATE,web,whatsa,com
+2025-12-29 16:30:09,https://web.whatsa.com/,0,LEGITIMATE,web,whatsa,com
+2025-12-29 16:30:09,https://web.whatsa.com/,0,LEGITIMATE,web,whatsa,com
+2025-12-29 16:30:09,https://web.whatsa.com/,0,LEGITIMATE,web,whatsa,com
+2025-12-29 16:30:17,https://web.Whatsapp.com/,2,LEGITIMATE,web,Whatsapp,com
+2025-12-29 16:37:37,http://192.168.1.1/login,7,FAKE / PHISHING,,192.168.1.1,
+2026-01-03 16:02:46,https://gemini.google.com/app/fb779134159dc35a,0,LEGIT,gemini,google,com
