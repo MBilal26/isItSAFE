@@ -1,12 +1,12 @@
 <div align="center">
 
-![isItSAFE Banner](file:///C:/Users/Bilal/.gemini/antigravity/brain/43c3ebee-c3c1-42d2-a47f-c8ba2412a2fe/isitsafe_banner_1767443294016.png)
+![isItSAFE Banner](Data/isitsafe_banner.png)
 
 # 🛡️ isItSAFE - Unified Security Suite
 ### *Ultimate Protection Suite for your Digital Life*
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](Data/LICENSE)
 [![Security Status](https://img.shields.io/badge/Security-Verified-success.svg)]()
 
 </div>
@@ -63,13 +63,13 @@ cd isItSAFE
 ### 3. Quick Setup (Via GUI)
 Launch the main application and click the **"INITIAL SETUP: INSTALL DEPENDENCIES"** button.
 ```bash
-python main.py
+python isItSafe.py
 ```
 
 ### 4. Manual Installation
 If you prefer the command line:
 ```bash
-pip install -r requirements.txt
+pip install -r Data/requirements.txt
 ```
 
 ---
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ## 📖 Usage
 Run the central hub to access all modules from a single dashboard:
 ```bash
-python main.py
+python isItSafe.py
 ```
 From the dashboard, you can launch individual modules like the **WiFi Scanner**, **URL Detector**, or **Metadata Cleaner** with a single click.
 

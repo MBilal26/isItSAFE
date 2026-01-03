@@ -7,7 +7,11 @@ import sys
 import threading
 
 # Logger integration
-from logger import log_event
+sys.path.append(os.path.join(os.getcwd(), "logs"))
+try:
+    from logger import log_event
+except ImportError:
+    def log_event(m, msg, l="info"): pass
 
 
 BG_DARK = "#0B0E14"
@@ -113,6 +117,32 @@ class MainMenu:
             fg=TEXT_DIM,
             padx=20
         ).pack(side=tk.RIGHT, fill=tk.Y)
+
+        tk.Button(
+            footer,
+            text="ⓘ About isItSAFE",
+            command=self._show_about,
+            bg=BG_CARD,
+            fg=ACCENT,
+            font=("Segoe UI", 8, "bold"),
+            relief="flat",
+            cursor="hand2",
+            padx=20
+        ).pack(side=tk.LEFT, fill=tk.Y)
+
+    def _show_about(self):
+        about_text = (
+            "isItSAFE - Unified Security Suite\n"
+            "Version 2.0\n\n"
+            "A comprehensive toolkit for modern digital protection.\n"
+            "Built with Python and passion.\n\n"
+            "Contributors:\n"
+            "• USAID\n"
+            "• BILAL\n"
+            "• SHADAN\n"
+            "• AYAN"
+        )
+        messagebox.showinfo("About isItSAFE", about_text)
 
     def _create_module_card(self, module, index):
         card = tk.Frame(self.card_frame, bg=BG_CARD, padx=15, pady=20, highlightthickness=1, highlightbackground="#2D3748")

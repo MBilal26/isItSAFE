@@ -11,7 +11,7 @@ from detector import check_fake_url
 from utils import extract_url_features, log_result, validate_url
 
 # Logger integration
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs"))
 try:
     from logger import log_event
 except ImportError:

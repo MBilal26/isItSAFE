@@ -8,8 +8,7 @@ from PyPDF2 import PdfReader, PdfWriter
 from docx import Document
 
 # Logger integration
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs"))
 try:
     from logger import log_event
 except ImportError:
