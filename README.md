@@ -93,5 +93,5 @@ Developed with ❤️ by:
 ---
 
 <div align="center">
-  <sub>Built for the Advanced Agentic Coding Project.</sub>
+  <sub>Ask your self isItSafe?. </sub>
 </div>

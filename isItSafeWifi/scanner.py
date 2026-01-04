@@ -26,12 +26,18 @@ class NetworkScanner:
             r"Signal\s+: (.*?)\n",
             re.DOTALL
         )
+
+    def clear_networks(self):
+        self.networks = {}
     
     def scan_networks(self) -> Dict[str, Dict]:
         if self.paused:
             return self.networks
         self.is_scanning = True
         try:
+            # Force Windows to search for new networks (non-blocking)
+            subprocess.run('netsh wlan scan', shell=True, capture_output=True, creationflags=0x08000000, timeout=5)
+            
             output = subprocess.check_output(
                 'netsh wlan show networks mode=bssid',
                 shell=True,
@@ -71,24 +77,42 @@ class NetworkScanner:
         self.is_scanning = False
         return self.networks
 
-    def detect_evil_twins(self) -> Dict[str, List[str]]:
-        ssid_map: Dict[str, List[str]] = {}
-        threats = {}
+    def detect_evil_twins(self) -> Dict[str, Dict]:
+        ssid_map: Dict[str, List[Dict]] = {}
+        threats = {} # Format: {ssid: {"type": "mismatch"|"duplicate", "bssids": [...]}}
         
-        # 1. Detect multiple BSSIDs for same SSID
+        # 1. Group BSSIDs by SSID
         for bssid, data in self.networks.items():
             ssid = data.get("SSID", "[Hidden]")
+            if ssid == "[Hidden]": continue
+            
             if ssid not in ssid_map:
                 ssid_map[ssid] = []
-            ssid_map[ssid].append(bssid)
+            
+            # Store data with BSSID for comparison
+            entry = data.copy()
+            entry["BSSID"] = bssid
+            ssid_map[ssid].append(entry)
         
-        # Find SSIDs with duplicate BSSIDs
-        duplicates = {ssid: bssids for ssid, bssids in ssid_map.items() if len(bssids) > 1 and ssid != "[Hidden]"}
+        # 2. Categorize Threats
+        for ssid, nodes in ssid_map.items():
+            if len(nodes) < 2: continue
+            
+            # Check for security profile mismatches
+            first_node = nodes[0]
+            mismatch_found = False
+            for i in range(1, len(nodes)):
+                if (nodes[i]["Auth"] != first_node["Auth"] or 
+                    nodes[i]["Encrypt"] != first_node["Encrypt"]):
+                    mismatch_found = True
+                    break
+            
+            if mismatch_found:
+                threats[ssid] = {"type": "mismatch", "bssids": [n["BSSID"] for n in nodes]}
+            else:
+                threats[ssid] = {"type": "duplicate", "bssids": [n["BSSID"] for n in nodes]}
         
-        # 2. Heuristic check: Open networks with same name as secure ones (common phishing)
-        # (This is a future enhancement)
-        
-        return duplicates
+        return threats
 
 class NetworkBlocker:
     @staticmethod

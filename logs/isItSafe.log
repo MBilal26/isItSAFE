@@ -53,3 +53,79 @@
 2026-01-03 19:34:37 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
 2026-01-03 19:34:41 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
 2026-01-03 19:34:47 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:05:37 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-04 22:05:51 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:06:01 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:11:06 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-04 22:15:13 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-04 22:15:41 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:15:51 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:01 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:11 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:21 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:31 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:41 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:16:52 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:17:02 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:17:12 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:17:22 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:17:53 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-04 22:18:23 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:18:33 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:18:43 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:18:53 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:03 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:13 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:23 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:34 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:43 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-04 22:19:44 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:19:54 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:04 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:14 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:24 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:35 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:45 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:20:55 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:05 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:15 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:25 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:35 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:46 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:21:56 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-04 22:24:36 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-04 22:24:37 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-04 22:24:58 - [INFO] - Connection - Attempting connection to Nayatel Main-EXT
+2026-01-04 22:28:45 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-04 22:28:46 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-05 00:18:31 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:18:32 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-05 00:28:10 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:28:26 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:29:54 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:30:51 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:30:52 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-05 00:41:22 - [INFO] - WiFi_GUI - Core services initialized.
+2026-01-05 00:41:23 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-05 00:41:52 - [INFO] - Blocker - Unblocking SSID: Nayatel 102
+2026-01-05 00:41:52 - [INFO] - Blocker - Successfully unblocked SSID: Nayatel 102
+2026-01-05 00:41:52 - [INFO] - Blocker - User unblocked SSID: Nayatel 102
+2026-01-05 00:42:01 - [WARNING] - Blocker - Attempting to block SSID: Nayatel 102 EXT
+2026-01-05 00:42:01 - [INFO] - Blocker - Successfully blocked SSID: Nayatel 102 EXT
+2026-01-05 00:42:03 - [INFO] - Blocker - User blocked SSID: Nayatel 102 EXT
+2026-01-05 00:42:07 - [WARNING] - Blocker - Attempting to block SSID: Hexxi
+2026-01-05 00:42:08 - [INFO] - Blocker - Successfully blocked SSID: Hexxi
+2026-01-05 00:42:09 - [INFO] - Blocker - User blocked SSID: Hexxi
+2026-01-05 00:42:27 - [WARNING] - Blocker - Attempting to block SSID: Nayatel 102
+2026-01-05 00:42:27 - [INFO] - Blocker - Successfully blocked SSID: Nayatel 102
+2026-01-05 00:42:29 - [INFO] - Blocker - User blocked SSID: Nayatel 102
+2026-01-05 00:42:38 - [WARNING] - Blocker - Attempting to block SSID: NAYATEL 202
+2026-01-05 00:42:38 - [INFO] - Blocker - Successfully blocked SSID: NAYATEL 202
+2026-01-05 00:42:40 - [INFO] - Blocker - User blocked SSID: NAYATEL 202
+2026-01-05 00:42:53 - [INFO] - Blocker - Unblocking SSID: NAYATEL 202
+2026-01-05 00:42:53 - [INFO] - Blocker - Successfully unblocked SSID: NAYATEL 202
+2026-01-05 00:42:53 - [INFO] - Blocker - User unblocked SSID: NAYATEL 202
+2026-01-05 00:43:23 - [INFO] - WiFi_GUI - Scanner paused.
+2026-01-05 00:43:25 - [INFO] - WiFi_GUI - Scanner resumed.
+2026-01-05 00:43:26 - [INFO] - WiFi_GUI - Scanner paused.
+2026-01-05 00:43:27 - [INFO] - WiFi_GUI - Scanner resumed.
