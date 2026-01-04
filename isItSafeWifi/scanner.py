@@ -77,6 +77,37 @@ class NetworkScanner:
         self.is_scanning = False
         return self.networks
 
+    def get_active_connection(self) -> Dict[str, str]:
+        try:
+            output = subprocess.check_output(
+                'netsh wlan show interfaces',
+                shell=True,
+                creationflags=0x08000000
+            ).decode('ascii', errors='ignore')
+            
+            ssid_match = re.search(r"\n\s+SSID\s+: (.*?)\n", output)
+            bssid_match = re.search(r"\n\s+BSSID\s+: (.*?)\n", output)
+            
+            return {
+                "SSID": ssid_match.group(1).strip() if ssid_match else None,
+                "BSSID": bssid_match.group(1).strip().upper() if bssid_match else None
+            }
+        except:
+            return {"SSID": None, "BSSID": None}
+
+    def check_internet_access(self) -> bool:
+        try:
+            # Ping Google DNS with a short timeout
+            res = subprocess.run(
+                'ping -n 1 -w 1000 8.8.8.8',
+                shell=True,
+                capture_output=True,
+                creationflags=0x08000000
+            )
+            return res.returncode == 0
+        except:
+            return False
+
     def detect_evil_twins(self) -> Dict[str, Dict]:
         ssid_map: Dict[str, List[Dict]] = {}
         threats = {} # Format: {ssid: {"type": "mismatch"|"duplicate", "bssids": [...]}}

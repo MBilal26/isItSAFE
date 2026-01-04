@@ -155,6 +155,7 @@ class IsItSafeGUI:
         self.tree.tag_configure('danger', background="#7F1D1D", foreground=DANGER)
         self.tree.tag_configure('warning', background=WARNING, foreground=BG_DARK)
         self.tree.tag_configure('safe', background=BG_DARK, foreground=TEXT_MAIN)
+        self.tree.tag_configure('connected', background="#064E3B", foreground=SUCCESS)
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.tree.bind("<<TreeviewSelect>>", self._on_tree_select)
         self.tree.bind("<Button-3>", self._show_context_menu)
@@ -232,6 +233,8 @@ class IsItSafeGUI:
         networks = self.scanner.networks
         evil_twins = self.scanner.detect_evil_twins()
         blocked_ssids = self.db.get_all_blocks()
+        active_conn = self.scanner.get_active_connection()
+        has_internet = self.scanner.check_internet_access() if active_conn["SSID"] else False
         
         # Group data for SSID Parents
         ssid_groups = {}
@@ -258,7 +261,12 @@ class IsItSafeGUI:
             # Determine color/verdict for parent
             tag = 'safe'
             verdict = "🛡️ SECURE"
-            if is_mismatch:
+            
+            is_active_ssid = active_conn["SSID"] == ssid
+            if is_active_ssid:
+                tag = 'connected'
+                verdict = f"🛡️ CONNECTED ({'INT OK' if has_internet else 'NO INT'})"
+            elif is_mismatch:
                 verdict = "🚨 EVIL TWIN"
                 tag = 'danger'
                 threat_count += 1
@@ -272,10 +280,17 @@ class IsItSafeGUI:
             for bssid, data in group['bssids']:
                 c_sig = f"{data.get('Signal')}%"
                 c_sec = f"{data.get('Auth')} / {data.get('Encrypt')}"
-                c_tag = 'danger' if "none" in data.get('Encrypt', '').lower() else 'safe'
-                c_verdict = "🔓 UNSECURE" if "none" in data.get('Encrypt', '').lower() else "🛡️ AP VALID"
+                
+                is_active_bssid = active_conn["BSSID"] == bssid
+                c_tag = 'connected' if is_active_bssid else ('danger' if "none" in data.get('Encrypt', '').lower() else 'safe')
+                
+                if is_active_bssid:
+                    c_verdict = f"�️ ACTIVE AP ({'INT OK' if has_internet else 'NO INT'})"
+                else:
+                    c_verdict = "�🔓 UNSECURE" if "none" in data.get('Encrypt', '').lower() else "🛡️ AP VALID"
                 
                 self.tree.insert(parent_id, "end", values=("  ↳ " + bssid, bssid, c_sig, c_sec, c_verdict), tags=(c_tag,))
+
 
             if is_mismatch or is_duplicate:
                 if ssid not in self.alerted_ssids:
