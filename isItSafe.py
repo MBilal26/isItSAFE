@@ -50,6 +50,13 @@ MODULES = [
         "path": "isItSafePIC/metaData_GUI.py",
         "icon": "🖼️"
     }
+    ,
+    {
+        "name": "Packet Scanner",
+        "desc": "Live packet capture & simple analysis",
+        "path": "isItSafeWifi/packet_Scanner.py",
+        "icon": "🔎"
+    }
 ]
 
 class MainMenu:
@@ -157,29 +164,31 @@ class MainMenu:
         messagebox.showinfo("About isItSAFE", about_text)
 
     def _create_module_card(self, module, index):
-        card = tk.Frame(self.card_frame, bg=BG_CARD, padx=15, pady=20, highlightthickness=1, highlightbackground="#2D3748")
-        card.grid(row=0, column=index, padx=10, sticky="nsew")
+        card = tk.Frame(self.card_frame, bg=BG_CARD, padx=18, pady=24, highlightthickness=2, highlightbackground=ACCENT)
+        card.grid(row=0, column=index, padx=18, pady=18, sticky="nsew")
         self.card_frame.grid_columnconfigure(index, weight=1)
 
-        tk.Label(card, text=module["icon"], font=("Segoe UI", 32), bg=BG_CARD).pack(pady=(0, 10))
-        
+        # Icon with white color for visibility
+        icon_label = tk.Label(card, text=module["icon"], font=("Segoe UI", 36, "bold"), bg=BG_CARD, fg="#FFFFFF")
+        icon_label.pack(pady=(0, 12))
+
         tk.Label(
-            card, 
-            text=module["name"], 
-            font=("Segoe UI", 13, "bold"), 
-            bg=BG_CARD, 
-            fg=TEXT_MAIN
+            card,
+            text=module["name"],
+            font=("Segoe UI", 15, "bold"),
+            bg=BG_CARD,
+            fg=ACCENT
         ).pack()
 
         tk.Label(
-            card, 
-            text=module["desc"], 
-            font=("Segoe UI", 9), 
-            bg=BG_CARD, 
-            fg=TEXT_DIM, 
-            wraplength=180,
+            card,
+            text=module["desc"],
+            font=("Segoe UI", 10),
+            bg=BG_CARD,
+            fg=TEXT_DIM,
+            wraplength=200,
             justify="center"
-        ).pack(pady=10)
+        ).pack(pady=12)
 
         launch_btn = tk.Button(
             card,
@@ -187,13 +196,15 @@ class MainMenu:
             command=lambda m=module: self._launch_module(m),
             bg=ACCENT,
             fg=BG_DARK,
-            font=("Segoe UI", 10, "bold"),
+            font=("Segoe UI", 11, "bold"),
             relief="flat",
             cursor="hand2",
-            padx=20,
-            pady=8
+            padx=24,
+            pady=10,
+            highlightbackground=ACCENT,
+            highlightthickness=1
         )
-        launch_btn.pack(side=tk.BOTTOM, pady=(10, 0))
+        launch_btn.pack(side=tk.BOTTOM, pady=(14, 0))
         self.module_buttons[module["name"]] = launch_btn
 
     def _start_bg_monitoring(self):

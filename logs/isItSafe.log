@@ -131,3 +131,151 @@
 2026-01-05 00:43:27 - [INFO] - WiFi_GUI - Scanner resumed.
 2026-01-05 00:57:32 - [INFO] - WiFi_GUI - Core services initialized.
 2026-01-05 00:57:33 - [INFO] - WiFi_GUI - GUI loaded and scan cycles started.
+2026-01-06 12:56:13 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:56:24 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:56:27 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 12:56:28 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 12:56:29 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 12:56:56 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:57:06 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:57:17 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:57:28 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:57:39 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:57:50 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:01 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:12 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:23 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:34 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:45 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:58:56 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:59:07 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 12:59:07 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:59:18 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:59:29 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:59:40 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 12:59:50 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 13:00:01 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 13:00:12 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-06 13:00:22 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:00:33 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:00:44 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:00:55 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:06 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:17 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:27 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:38 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:49 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:01:50 - [INFO] - Main_Hub - Starting dependency installation...
+2026-01-06 13:01:56 - [INFO] - Main_Hub - Dependencies installed successfully.
+2026-01-06 13:02:00 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:02:11 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:02:15 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 13:02:21 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:02:32 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:04 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:15 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:26 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:37 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:48 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:03:58 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:04:09 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:04:20 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:04:30 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:04:40 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-06 13:04:41 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:04:42 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-06 13:04:52 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:03 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:14 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:25 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:35 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:46 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:05:57 - [WARNING] - Main_Hub - Background Monitor: 3 Evil Twins detected!
+2026-01-06 13:07:01 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:07:12 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:07:23 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:07:33 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:07:44 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:07:48 - [INFO] - Main_Hub - Launching Metadata Cleaner...
+2026-01-06 13:07:55 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:08:06 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:08:17 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:08:27 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:08:38 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:08:49 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:00 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:11 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:22 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:32 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:43 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:09:54 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:05 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:16 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:26 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:37 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:47 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:10:58 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:11:09 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:11:20 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:25:59 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:26:06 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-06 13:26:10 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:26:21 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:26:32 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:26:40 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-06 13:26:43 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:26:54 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-06 13:27:05 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 10:25:11 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:25:21 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:25:26 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-09 10:25:32 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:25:43 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:25:54 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:26:05 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:26:16 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:26:27 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:48:15 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:48:19 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 10:48:26 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:56:10 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 10:56:51 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:02 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:13 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:24 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:35 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:45 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:57:57 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:58:08 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:58:18 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:58:29 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 10:58:40 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:00:58 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:00:58 - [ERROR] - Main_Hub - Launch failed for Packet Scanner: Command '['C:\\Program Files\\Python310\\python.exe', 'C:\\Users\\SYS\\Desktop\\isItSAFE\\isItSafeWifi\\packet_Scanner.py']' returned non-zero exit status 1.
+2026-01-09 11:02:14 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:05:48 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:05:59 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:06:10 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:06:25 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:06:27 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:06:36 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:06:37 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:06:47 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:06:58 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:07:07 - [INFO] - Main_Hub - Starting dependency installation...
+2026-01-09 11:07:08 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:07:19 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:07:30 - [WARNING] - Main_Hub - Background Monitor: 2 Evil Twins detected!
+2026-01-09 11:08:09 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 11:08:10 - [INFO] - Main_Hub - Launching WiFi Security Monitor...
+2026-01-09 11:08:20 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 11:08:28 - [INFO] - Main_Hub - Launching URL Detector...
+2026-01-09 11:08:31 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 11:08:37 - [INFO] - Main_Hub - Launching Metadata Cleaner...
+2026-01-09 11:08:38 - [INFO] - Main_Hub - Launching Metadata Cleaner...
+2026-01-09 11:08:42 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 11:08:48 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:08:52 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:08:52 - [INFO] - Main_Hub - Launching Packet Scanner...
+2026-01-09 11:08:52 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
+2026-01-09 11:09:03 - [WARNING] - Main_Hub - Background Monitor: 1 Evil Twins detected!
